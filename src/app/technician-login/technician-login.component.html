@@ -1,0 +1,42 @@
+<!--<h2>TECHNICIAN LOGIN PAGE WILL BE CREATED HERE</h2>
+<button class=" btn btn-primary" (click)=goToList()>VIEW LIST</button>
+-->
+<div>
+                
+    <h2 class="text-center">LOGIN PAGE</h2> 
+    <div class = "card col-md-6 offset-md-3 offset-md-3">
+    <form style="margin-top: 5px" (ngSubmit)="onSubmit()">
+      
+                             <div class= "form-group">
+                                 <label> TechID: </label>
+                                 <input placeholder=" Technician ID" name="techID" class="form-control" 
+                                 id="techID" [(ngModel)] = "technician.techID"     />
+                             </div>
+                         
+
+                             <div class = "form-group">
+                                 <label> Password: </label>
+                                 <input type= "password" placeholder="Password" name="password" class="form-control" 
+                                 id="password" [(ngModel)] = "technician.password"  />
+                             </div>
+
+
+
+
+                             <div style="margin-bottom: 2%;">
+                             <button class="btn btn-success " type ="submit">Login</button>
+                             <button class="btn btn-danger "  style="margin-left: 10px" (click)="homepage()">Cancel</button>
+                            <button class="btn btn-primary "  style="margin-left: 10px"(click)="register()"> Register</button>
+                             </div>
+                         </form>
+                       
+                        <div class="alert alert-danger text-center">
+                            <div class="error" ><b>{{ error }}</b></div>
+                         <!-- { this.state.errorMessage &&
+                           <h5 className="error" >  { this.state.errorMessage } </h5> }-->
+                        </div>
+    </div>
+           <div class="forgotpassbutton">
+          <button class="btn btn-info "  style="margin-left: 60.5%; margin-top: 1%;" (click)="forgotpassword()">Forgot password ?</button>    
+          </div>
+ </div>

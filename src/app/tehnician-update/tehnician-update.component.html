@@ -1,0 +1,78 @@
+
+    <h2 class="text-center">UPDATE TECHNICIAN PAGE</h2>
+    <div class="update-page">
+    <div class = "card col-md-6 offset-md-3 offset-md-3">
+      
+           <div class = "card-body">
+                       <form (ngSubmit)="onSubmit()">
+
+                      
+                       
+                           <div class = "form-group">
+                               <label> Full Name: </label>
+                               <input placeholder=" Full Name" name="fullName" class="form-control" 
+                                  id="fullName"  [(ngModel)] = "technician.name"/>
+                                
+                           </div>
+                          
+                           <div class = "form-group">
+                               <label> Email Id: </label>
+                               <input placeholder="Email Address" name="emailID" class="form-control" 
+                                  id="emailID" [(ngModel)] = "technician.email"/>
+                                        
+                           </div>
+
+                           <div class = "form-group">
+                               <label> Phone Number: </label>
+                               <input placeholder="Number" name="phoneNumber" class="form-control" 
+                                   id="phoneNumber" [(ngModel)] = "technician.number"/>
+                                
+                           </div>
+
+                           <div class = "form-group">
+                               <label> Gender: </label>
+                               <input placeholder="Gender" name="Gender" class="form-control" 
+                                 id="Gender" [(ngModel)] = "technician.gender"/>
+                               
+                                   
+                           </div>
+
+                           <div class = "form-group">
+                               <label> Permanent Address: </label>
+                               <input placeholder="Permanent Address" name="permanentaddress" class="form-control" 
+                                   id="permanentaddress" [(ngModel)] = "technician.permanentAddress"/>
+                             
+                                 
+                           </div> 
+
+                           <div class = "form-group">
+                               <label> Communication Address: </label>
+                               <input placeholder="Communication Address" name="communicationaddress" class="form-control" 
+                                   id="communicationaddress" [(ngModel)] = "technician.communicationAddress"/>
+                                 
+                           </div> 
+
+                           <div class = "form-group">
+                               <label> Password: </label>
+                               <input type="password" placeholder="Password" name="password" class="form-control" 
+                                   id="password" [(ngModel)] = "technician.password"   />
+                                                
+                          
+                           </div>
+                           <button class = "btn btn-success" type ="submit">Save</button>
+                           <button class="btn btn-danger" style="margin-left: 5px;" (click)=goToListPage()>Cancel</button>
+                          
+                      
+                       </form>
+                   </div>
+                  
+</div>
+</div> 
+
+
+
+
+
+
+
+

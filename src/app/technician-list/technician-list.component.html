@@ -1,0 +1,47 @@
+
+<h2 class="text-center">TECHNICIANS LIST</h2>
+<div class="listbuttons">
+<button class=" btn btn-primary btn-sm" (click)="search()" >SEARCH</button>  
+<button class=" btn btn-primary btn-sm" (click)="logout()" style="margin-left: 3px;">LOGOUT</button>
+<button class=" btn btn-primary btn-sm" (click)="datatable()" style="margin-left: 3px;">DATATABLE</button>
+
+</div>
+<div class="container">
+<table class="table table-striped table-bordered">
+<thead >
+    <tr>
+            <th>TECHNICIAN NAME</th>
+            <th>TECHNICIAN NUMBER</th>
+            <th>TECHNICIAN EMAILID</th>
+            <th>TECHNICIAN GENDER</th>
+            <th>TECHNICIAN ADDRESS</th>
+            <th>ACTION</th>
+
+    </tr>
+</thead>
+<tbody>
+     <tr *ngFor="let technician of technicians">
+            <td>{{technician.name}} </td>
+            <td>{{technician.number}}</td>
+            <td>{{technician.email}}</td>
+            <td>{{technician.gender}}</td>
+            <td>{{technician.permanentAddress}}</td>
+           
+            <td style="width: 20%;">
+                
+                <button class=" btn btn-info btn-sm" (click)="viewTechnician(technician.techID)">VIEW</button>
+                <button class=" btn btn-danger btn-sm" style="margin-left: 3px;"  (click)="deleteTechnician(technician.techID)">DELETE</button>
+   
+    <button class=" btn btn-primary btn-sm"style="margin-left: 3px;" (click)="updateTechnician(technician.techID)">UPDATE</button>
+            
+            
+            </td>
+     </tr>
+
+</tbody>
+
+
+
+
+</table></div>
+

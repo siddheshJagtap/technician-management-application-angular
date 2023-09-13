@@ -1,0 +1,51 @@
+<h2 class="text-center">TECHNICIAN SEARCH PAGE</h2>
+<div>
+    <div class = "card col-md-6 offset-md-3 offset-md-3" style="background-color:lightgray;">
+            <div class = "card-body">
+                        <form (ngSubmit)="onSubmit()">
+
+                            <div class = "form-group">
+                                <label> Technician ID: </label>
+                                <input placeholder=" Technician ID" name="techId" class="form-control" 
+                                id="techID" [(ngModel)] = "technician.techID"    />
+                                 
+                            </div>
+                           
+                            
+                                    
+                            
+
+              
+                            <button class="btn btn-info btn-sm"  type ="submit">SEARCH</button>
+                            <button class="btn btn-danger btn-sm"  style="margin-left: 10px" (click)=goToListPage()>Cancel</button>
+                        </form>
+                       
+                       <div class="alert alert-danger text-center" style="margin-top: 2%;">
+                        <div class="error" ><b>{{ error }}</b></div>
+                         </div>
+
+                    </div>
+                    </div>
+                    
+                    <table class="table  table-bordered " style="margin-top: 2%;" >
+                    <thead class="thead-dark">
+                 <tr>
+                     <th> TECHNICIANS NAME</th>
+                     <th> TECHNICIANS NUMBER</th>
+                     <th> TECHNICIANS EMAIL</th>
+                      <th> TECHNICIANS GENDER</th>
+                    <th> TECHNICIANS ADDRESS</th>
+                     
+                 </tr>
+             </thead>
+             <tbody>
+             <td  class="table-info"> {{techniciandata.name}}</td>
+             <td class="table-info"> {{techniciandata.number}}</td>
+             <td class="table-info"> {{techniciandata.email}}</td>
+             <td class="table-info"> {{techniciandata.gender}}</td>
+             <td class="table-info"> {{techniciandata.permanentAddress}}</td>       
+             </tbody>
+
+          </table>
+
+</div>
